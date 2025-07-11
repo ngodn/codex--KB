@@ -554,7 +554,7 @@ Discovery Hub provides rapid network assessment capabilities to quickly understa
 #### Additional Vendors:
 3Com, A10 Networks, ADTRAN, Aerohive, Alcatel, Allied, APC, Avaya, Barracuda, Brocade, Citrix, F5, Huawei, IBM, NETGEAR, VMware, and 70+ additional vendors.
 
-**Complete Vendor List:** [Device42 Supported Vendors](https://docs.device42.com/auto-discovery/network-auto-discovery/supported-vendors/)
+**Complete Vendor List:** [Device42 Supported Vendors](https://docs.device42.com/auto-discovery/vendors-supported-in-snmp-auto-discovery/)
 
 ### Appendix B: Discovery Port Configurations
 
