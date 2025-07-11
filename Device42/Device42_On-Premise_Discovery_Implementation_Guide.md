@@ -139,7 +139,7 @@ This matching prevents duplicate device creation across different discovery meth
 
 SNMP discovery builds your Layer 2 network landscape and discovers network devices, VLANs, subnets, IP addresses, and MAC address tables.
 
-### Client Responsibilities
+### Customer Responsibilities
 
 🔧 **Network Team Tasks:**
 - Enable SNMP protocol on target network devices
@@ -196,9 +196,9 @@ Windows discovery collects comprehensive information from Windows servers and wo
 - Script testing and validation
 - Implementation guidance and best practices
 
-### Client Responsibilities
+### Customer Responsibilities
 
-📋 **Client Tasks:**
+📋 **Customer Tasks:**
 - Deploy WMI enablement script to target devices
 - Choose deployment method:
   - Individual execution on each device
@@ -224,14 +224,14 @@ Windows discovery collects comprehensive information from Windows servers and wo
 
 ```mermaid
 sequenceDiagram
-    participant Client as Client Team
+    participant Customer as Customer Team
     participant iZeno as iZeno
     participant WDS as Windows Discovery Service
     participant Target as Target Windows Device
     
-    Client->>iZeno: Request WMI enablement assistance
-    iZeno->>Client: Provide PowerShell script
-    Client->>Target: Deploy and execute script
+    Customer->>iZeno: Request WMI enablement assistance
+    iZeno->>Customer: Provide PowerShell script
+    Customer->>Target: Deploy and execute script
     Target->>Target: Configure WMI/firewall settings
     WDS->>Target: Initiate discovery connection
     Target->>WDS: Return system information
@@ -263,7 +263,7 @@ sequenceDiagram
 
 Linux/Unix discovery uses SSH connections to collect comprehensive system information from Linux and Unix servers.
 
-### Client Responsibilities
+### Customer Responsibilities
 
 🔧 **System Administration Tasks:**
 - Ensure SSH service is running on target systems (port 22)
@@ -434,7 +434,7 @@ Discovery Hub provides rapid network assessment capabilities to quickly understa
 
 ## Responsibilities Matrix
 
-| Task Category | iZeno Responsibilities | Client Responsibilities |
+| Task Category | iZeno Responsibilities | Customer Responsibilities |
 |---|---|---|
 | **Planning** | • Discovery strategy guidance<br>• Best practices recommendations<br>• Implementation planning | • Environment assessment<br>• Business requirements definition<br>• Resource allocation |
 | **Windows Discovery** | • PowerShell script provision<br>• WMI configuration guidance<br>• Testing assistance | • Script deployment (individual/bulk)<br>• Service account creation<br>• Firewall configuration |
@@ -462,21 +462,21 @@ Discovery Hub provides rapid network assessment capabilities to quickly understa
 
 **Problem:** SNMP Timeout or Access Denied
 - **Solution:** Verify SNMP configuration and community strings
-- **Client Action:** Coordinate with network team for SNMP enablement
+- **Customer Action:** Coordinate with network team for SNMP enablement
 
 **Problem:** Incomplete Device Information
 - **Solution:** Verify SNMP permissions and MIB availability
-- **Client Action:** Consult vendor documentation for complete SNMP configuration
+- **Customer Action:** Consult vendor documentation for complete SNMP configuration
 
 #### Linux Discovery Issues
 
 **Problem:** SSH Connection Refused
 - **Solution:** Verify SSH service status and firewall configuration
-- **Client Action:** Enable SSH service and configure firewall rules
+- **Customer Action:** Enable SSH service and configure firewall rules
 
 **Problem:** Permission Denied for Hardware Commands
 - **Solution:** Configure sudo permissions for discovery commands
-- **Client Action:** Implement appropriate sudoers configuration
+- **Customer Action:** Implement appropriate sudoers configuration
 
 ### Discovery Job Monitoring
 
@@ -514,7 +514,7 @@ Discovery Hub provides rapid network assessment capabilities to quickly understa
 ### Appendix C: iZeno Contact Information
 
 **Technical Support:**
-- Support Portal: [Client Portal URL]
+- Support Portal: [Customer Portal URL]
 - Email: support@izeno.com
 - Phone: [Support Phone Number]
 
