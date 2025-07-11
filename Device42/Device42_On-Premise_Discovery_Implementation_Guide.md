@@ -107,11 +107,11 @@ Device42 recommends the following sequence to minimize reconciliation efforts:
 
 ```mermaid
 flowchart TD
-    A["1. Network Discovery"] --> B["2. V-Server Discovery"]
-    B --> C["3. Windows/Linux Discovery"]
-    C --> D["4. Cloud Discovery"]
-    D --> E["5. Blade Discovery"]
-    E --> F["6. IPMI Discovery"]
+    A[Network Discovery] --> B[V-Server Discovery]
+    B --> C[Windows/Linux Discovery]
+    C --> D[Cloud Discovery]
+    D --> E[Blade Discovery]
+    E --> F[IPMI Discovery]
 ```
 
 **Rationale:**
