@@ -106,12 +106,12 @@ Device42 supports multiple discovery methods:
 Device42 recommends the following sequence to minimize reconciliation efforts:
 
 ```mermaid
-graph TD
-    A[1. Network Discovery] --> B[2. V-Server Discovery]
-    B --> C[3. Windows/Linux Discovery]
-    C --> D[4. Cloud Discovery]
-    D --> E[5. Blade Discovery]
-    E --> F[6. IPMI Discovery]
+flowchart TD
+    A["1. Network Discovery"] --> B["2. V-Server Discovery"]
+    B --> C["3. Windows/Linux Discovery"]
+    C --> D["4. Cloud Discovery"]
+    D --> E["5. Blade Discovery"]
+    E --> F["6. IPMI Discovery"]
 ```
 
 **Rationale:**
