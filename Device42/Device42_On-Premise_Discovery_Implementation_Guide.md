@@ -2,7 +2,6 @@
 
 **Prepared by:** iZeno  
 **Version:** 1.0  
-**Date:** [Current Date]
 
 ## Table of Contents
 
@@ -511,7 +510,7 @@ Discovery Hub provides rapid network assessment capabilities to quickly understa
 | IPMI | 623 | UDP | MA/RC → Targets |
 | Device42 API | 443 | TCP | MA ↔ RC/WDS |
 
-### Appendix C: iZeno Contact Information
+<!-- ### Appendix C: iZeno Contact Information
 
 **Technical Support:**
 - Support Portal: [Customer Portal URL]
@@ -529,6 +528,6 @@ Discovery Hub provides rapid network assessment capabilities to quickly understa
 - **Created:** [Date]
 - **Last Updated:** [Date]
 - **Version:** 1.0
-- **Next Review:** [Date + 3 months]
+- **Next Review:** [Date + 3 months] -->
 
-*This document contains confidential and proprietary information. Distribution is restricted to authorized personnel only.*
+<!-- *This document contains confidential and proprietary information. Distribution is restricted to authorized personnel only.* -->
