@@ -22,13 +22,7 @@
 
 ## Executive Summary
 
-This guide provides a comprehensive approach to implementing Device42's autodiscovery capabilities for on-premise infrastructure. Device42 automates the discovery of IT assets through agentless methods, building an accurate Configuration Management Database (CMDB) with minimal network impact.
-
-**Key Benefits:**
-- Agentless discovery reduces security concerns and administrative overhead
-- Automated data collection ensures CMDB accuracy and currency
-- Comprehensive asset visibility across network, server, and virtualization layers
-- Scheduled discovery maintains data freshness
+This guide provides an approach to implementing Device42's autodiscovery capabilities for on-premise infrastructure. Device42 automates the discovery of IT assets through agentless methods, building an accurate Configuration Management Database (CMDB) with minimal network impact.
 
 ---
 
