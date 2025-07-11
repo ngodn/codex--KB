@@ -67,15 +67,6 @@ Device42 supports multiple discovery methods:
 
 ## Prerequisites and System Requirements
 
-### Device42 Appliance Requirements
-
-**Minimum Configuration:**
-- 4 vCPUs
-- 8 GB RAM
-- 1 Gbps network connection
-- Dedicated resource pool (no resource contention)
-- SSD storage (recommended)
-
 ### Network Requirements
 
 **Required Ports and Protocols:**
@@ -437,9 +428,9 @@ Discovery Hub provides rapid network assessment capabilities to quickly understa
 |---|---|---|
 | **Planning** | • Discovery strategy guidance<br>• Best practices recommendations<br>• Implementation planning | • Environment assessment<br>• Business requirements definition<br>• Resource allocation |
 | **Windows Discovery** | • PowerShell script provision<br>• WMI configuration guidance<br>• Testing assistance | • Script deployment (individual/bulk)<br>• Service account creation<br>• Firewall configuration |
-| **Network Discovery** | • SNMP job configuration<br>• Discovery optimization<br>• Results analysis | • SNMP enablement on devices<br>• Community string management<br>• Network team coordination |
+| **Network Discovery** | • SNMP job configuration<br>• Results analysis | • SNMP enablement on devices<br>• Community string management<br>• Network team coordination |
 | **Linux Discovery** | • SSH configuration guidance<br>• Permission optimization<br>• Discovery job setup | • SSH access configuration<br>• Service account creation<br>• sudo permissions setup |
-| **Support** | • Discovery troubleshooting<br>• Performance optimization<br>• Best practices guidance | • Infrastructure management<br>• Credential management<br>• Change coordination |
+| **Support** | • Discovery troubleshooting<br>• Best practices guidance | • Infrastructure management<br>• Credential management<br>• Change coordination |
 
 ---
 
