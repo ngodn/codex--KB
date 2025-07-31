@@ -4,7 +4,7 @@
 
 ![XSOAR-JIRA-Analyst Workflow](xsoar-integration-workflow-example.png)
 
-*This flowchart illustrates the complete incident response workflow across XSOAR, JIRA, and Analyst layers, showing the integration points and decision flows for automated and manual incident handling.*
+*This flowchart illustrates sample incident response workflow across XSOAR, JIRA, and Analyst layers, showing the integration points and decision flows for automated and manual incident handling.*
 
 ## 📋 API Operations Mapping
 
