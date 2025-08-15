@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aequify - Canvas Logo Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+        }
+
+        canvas {
+            display: block;
+            cursor: none;
+        }
+
+        .subtitle {
+            position: fixed;
+            bottom: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            color: #ffaa00;
+            opacity: 0;
+            animation: fadeInSubtitle 2s ease-out 8s forwards;
+            text-shadow: 0 0 10px #ffaa00;
+            z-index: 100;
+            font-family: 'Courier New', monospace;
+        }
+
+        @keyframes fadeInSubtitle {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="subtitle">eins0fx/aequify:gematria-0.33.666.0</div>
+
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        
+        var centerX = 0;
+        var centerY = 0;
+        var bgGradient = null;
+        
+        var logoLines = [
+            "                            7                  7                            ",
+            "                              7777777777777777                              ",
+            "                       777777777777777777777777777777                       ",
+            "                    777777777777777777777777777777777777                    ",
+            "                 777777777777722277777777777777777777777777   1             ",
+            "               7777777777777780 08777777777777777777777777777               ",
+            "            777777777777777790   0877777777777777777777777777777            ",
+            "          7777777777777777740  0  09777777777777777777777777777777          ",
+            "         7777777777777777720  700  02777777777777777777777777777777         ",
+            "       77777777777777777710  00107  02777777777777777777777777777777        ",
+            "      777777777777777777105  07710   077777777777777777777777777777777      ",
+            "     77777777777777777770   0377710  0077777777777777777777777777777777     ",
+            "  1 777777777777777777780  057777720  6077777777777777777777777777777777 3  ",
+            "    77777777777777777780  06777777760  087777777777777777777777777777777    ",
+            "   77777777777777777790  0000000003790  000000000000017777777777777777777   ",
+            "  77777777777777777750            38000              000377777777777777777  ",
+            " 77777777777777777730  0000000000000      0000000004    0017777777777777777 ",
+            " 7777777777777777710   07777777600   0000  077777774000   08777777777777777 ",
+            " 777777777777777770   0377777780   001770  00177777777800  0877777777777777 ",
+            " 777777777777777780  0377777790  001777730   0777777777780  087777777777777 ",
+            " 77777777777777780  0477777770  08777777750  08777777777790  05777777777777 ",
+            " 7777777777777780  09777777740  077777777750  08777777777790  0777777777777 ",
+            " 777777777777740  08777777770  03777777777780  0677777777770  0777777777777 ",
+            " 77777777777750  087777777770  077777777777780  047777777770  0777777777777 ",
+            " 7777777777774   077777777770  0777777777777780  97777777770  0777777777777 ",
+            "  777777777774 001777777777790 08777777777777784 97777777720  077777777777  ",
+            "   777777777711177777777777770  027777777777777331777777710   87777777777   ",
+            "    777777777777777777777777700  0977777777777777777777720   017777777777   ",
+            "  3  777777777777777777777777707  00277777777777777777100   017777777777    ",
+            "     7777777777777777777777777100   00677777777777772002  6027777777777     ",
+            "      77777777777777777777777777900   000005777777770    0077777777777      ",
+            "       777777777777777777777777777800      3006777770  0017777777777        ",
+            "         777777777777777777777777777300004    7777770   02777777777  1      ",
+            "          77777777777777777777777777777775000067777710   077777777          ",
+            "             777777777777777777777777777777777777777710  0377777            ",
+            "              777777777777777777777777777777777777777720  3777              ",
+            "                 777777777777777777777777777777777777773443                 ",
+            "                    777777777777777777777777777777777777                    ",
+            "                        7777777777777777777777777777                        ",
+            "                      7     77777777777777777777     1                      ",
+            "                                                                            "
+        ];
+
+        var symbols = [
+            // Hebrew characters
+            '\u05D0', '\u05D1', '\u05D2', '\u05D3', '\u05D4', '\u05D5', '\u05D6', '\u05D7', '\u05D8', '\u05D9',
+            '\u05DA', '\u05DB', '\u05DC', '\u05DD', '\u05DE', '\u05DF', '\u05E0', '\u05E1', '\u05E2', '\u05E3',
+            '\u05E4', '\u05E5', '\u05E6', '\u05E7', '\u05E8', '\u05E9', '\u05EA',
+            
+            // Arabic characters
+            '\u0627', '\u0628', '\u062A', '\u062B', '\u062C', '\u062D', '\u062E', '\u062F', '\u0630', '\u0631',
+            '\u0632', '\u0633', '\u0634', '\u0635', '\u0636', '\u0637', '\u0638', '\u0639', '\u063A', '\u0641',
+            '\u0642', '\u0643', '\u0644', '\u0645', '\u0646', '\u0647', '\u0648', '\u064A',
+            
+            // Additional symbols for variety
+            '+', '-', '=', '>', '<', '%', '#', '&', '@', '*', '/', '^', '~',
+            '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
+        ];
+        
+        var charWidth = 8;
+        var charHeight = 14;
+        var maxLineLength = 0;
+        
+        for (var i = 0; i < logoLines.length; i++) {
+            if (logoLines[i].length > maxLineLength) {
+                maxLineLength = logoLines[i].length;
+            }
+        }
+        
+        var logoWidth = maxLineLength * charWidth;
+        var logoHeight = logoLines.length * charHeight;
+        
+        function createBackgroundGradient() {
+            bgGradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            bgGradient.addColorStop(0, '#0a0a0a');
+            bgGradient.addColorStop(0.5, '#1a1a2e');
+            bgGradient.addColorStop(1, '#16213e');
+        }
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            centerX = canvas.width / 2 - logoWidth / 2;
+            centerY = canvas.height / 2 - logoHeight / 2;
+            createBackgroundGradient();
+        }
+        
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        
+        var chars = [];
+        for (var row = 0; row < logoLines.length; row++) {
+            var line = logoLines[row];
+            for (var col = 0; col < line.length; col++) {
+                var char = line[col];
+                if (char !== ' ') {
+                    chars.push({
+                        currentChar: symbols[Math.floor(Math.random() * symbols.length)],
+                        x: col * charWidth,
+                        y: row * charHeight,
+                        lastChange: 0,
+                        changeInterval: 150 + Math.random() * 300
+                    });
+                }
+            }
+        }
+
+        ctx.font = '14px Courier New';
+        
+        function animate() {
+            var currentTime = Date.now();
+            
+            ctx.fillStyle = bgGradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#00ff88';
+            ctx.shadowColor = '#00ff88';
+            
+            for (var i = 0; i < chars.length; i++) {
+                var charData = chars[i];
+                var x = centerX + charData.x;
+                var y = centerY + charData.y;
+                
+                if (currentTime - charData.lastChange > charData.changeInterval) {
+                    charData.currentChar = symbols[Math.floor(Math.random() * symbols.length)];
+                    charData.lastChange = currentTime;
+                    charData.changeInterval = 150 + Math.random() * 300;
+                }
+                
+                var mathGlow = 8 + 4 * Math.sin(currentTime * 0.003 + charData.x * 0.05);
+                ctx.shadowBlur = mathGlow;
+                
+                var finalScale = 1 + 0.03 * Math.sin(currentTime * 0.002 + charData.y * 0.08);
+                ctx.save();
+                ctx.translate(x, y);
+                ctx.scale(finalScale, finalScale);
+                ctx.fillText(charData.currentChar, 0, 0);
+                ctx.restore();
+            }
+            
+            ctx.shadowBlur = 0;
+            requestAnimationFrame(animate);
+        }
+        
+        animate();
+    </script>
+</body>
+</html>
