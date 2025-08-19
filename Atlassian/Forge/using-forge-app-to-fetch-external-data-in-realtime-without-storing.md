@@ -1,3 +1,16 @@
+**Document Properties**
+- **Title:** Using Forge Apps to Fetch External Data in Real-time Without Storing
+- **Author:** Denny Aprilio Pratama
+- **Email:** denny.pratama@izeno.com
+- **Company:** iZeno
+- **Created:** August 19, 2025
+- **Version:** 1.0
+
+> **Copyright Notice**  
+> This document is the intellectual property of iZeno. Unauthorized copying, distribution, modification, or reproduction of this material, in whole or in part, is strictly prohibited without prior written consent from iZeno. All rights reserved.
+
+---
+
 # Using Forge Apps to Fetch External Data in Real-time Without Storing
 
 ## Table of Contents
